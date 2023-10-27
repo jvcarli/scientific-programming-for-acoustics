@@ -10,18 +10,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Upgrade pip
+        run: |
+          python3 -m pip install --upgrade pip
+
       - name: Install Python dependencies
         run: |
-          pip install sphinx sphinx-book-theme
-      - name: Sphinx build
+          python3 -m pip install -r website/requirements.txt
+
+      - name: Sphinx build (english locale)
         run: |
-          sphinx-build website/src build
+          sphinx-build -b html -D language="en" website/src build/html/en
+
       - name: Deploy Sphinx website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/
+          publish_dir: build/html/en
           force_orphan: true
