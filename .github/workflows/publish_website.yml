@@ -16,7 +16,7 @@ jobs:
           pip install sphinx sphinx-book-theme
       - name: Sphinx build
         run: |
-          sphinx-build website build
+          sphinx-build website/src build
       - name: Deploy Sphinx website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
