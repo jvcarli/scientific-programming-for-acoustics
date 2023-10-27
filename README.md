@@ -58,7 +58,7 @@ $ pip install -r website/requirements.txt
 Finally build the website locally using:
 
 ```sh
-$ sphinx-build website build
+$ cd website && make html
 ```
 
 The website will be located at `build` diretory.
@@ -66,7 +66,7 @@ The website will be located at `build` diretory.
 You can view it in your browser by serving it locally with:
 
 ```sh
-$ python -m http.server --directory build
+$ python -m http.server --directory build/html
 ```
 
 Then opening the link: [http://localhost:8000](http://localhost:8000)
