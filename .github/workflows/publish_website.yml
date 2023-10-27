@@ -36,7 +36,7 @@ jobs:
 
       - name: Sphinx build (brazilian portuguese locale - pt_BR)
         run: |
-          sphinx-build -b html -D language="pt_BR" website/src build/html/pt_BR
+          sphinx-build -b html -D language="pt_BR" website/src build/html/pt-br
 
       - name: Deploy website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
