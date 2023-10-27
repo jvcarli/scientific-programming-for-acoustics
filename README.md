@@ -35,7 +35,7 @@ First check your python version and make it sure that it is the correct one:
 $ python --version
 ```
 
-It should output **at least Python 3.9.0**.
+It MUST output **at least Python 3.9.0**.
 
 Then create the virtual environment using:
 
