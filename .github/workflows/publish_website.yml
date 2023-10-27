@@ -24,11 +24,21 @@ jobs:
         run: |
           python3 -m pip install -r website/requirements.txt
 
-      - name: Sphinx build (english locale)
+      - name: Generate and update Sphinx locales
+        run: |
+          cd website
+          make gettext
+          sphinx-intl --config src/conf.py update --pot-dir build/gettext --language pt_BR
+
+      - name: Sphinx build (english locale - en)
         run: |
           sphinx-build -b html -D language="en" website/src build/html/en
 
-      - name: Deploy Sphinx website to GitHub Pages
+      - name: Sphinx build (brazilian portuguese locale - pt_BR)
+        run: |
+          sphinx-build -b html -D language="pt_BR" website/src build/html/pt_BR
+
+      - name: Deploy en locale of the website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
@@ -36,4 +46,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: build/html/en
           destination_dir: en
+          force_orphan: true
+
+      - name: Deploy pt_BR locale of the website to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/html/pt_BR
+          destination_dir: pt_BR
           force_orphan: true
