@@ -52,7 +52,7 @@ $ source venv/bin/activate
 Then install Python dependencies using:
 
 ```sh
-$ pip install -r requirements.txt
+$ pip install -r website/requirements.txt
 ```
 
 Finally build the website locally using:
