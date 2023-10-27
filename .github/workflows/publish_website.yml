@@ -38,22 +38,11 @@ jobs:
         run: |
           sphinx-build -b html -D language="pt_BR" website/src build/html/pt_BR
 
-      - name: Deploy en locale of the website to GitHub Pages
+      - name: Deploy website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/html/en
-          destination_dir: en
-          force_orphan: true
-
-      - name: Deploy pt_BR locale of the website to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        with:
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/html/pt_BR
-          destination_dir: pt_BR
+          publish_dir: build/html
           force_orphan: true
