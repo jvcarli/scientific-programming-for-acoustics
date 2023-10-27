@@ -9,6 +9,9 @@ venv/
 #       the user when using:
 #       `$ sphinx-build website <build-dir>`
 #       but here is listed common ones
+website/build/
+website/.build/
+website/_build/
 build/
 .build/
 _build/
