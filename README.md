@@ -21,7 +21,7 @@ Clone the repository:
 $ git clone https://github.com/jvcarli/scientific-programming-for-acoustics
 ```
 
-Go to the cloned directory:
+Go to the cloned repository directory:
 
 ```sh
 $ cd scientific-programming-for-acoustics
