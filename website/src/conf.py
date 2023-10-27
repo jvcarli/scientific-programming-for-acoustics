@@ -18,6 +18,12 @@ extensions = []
 templates_path = ['_templates']
 exclude_patterns = []
 
+# Localization options
+
+# NOTE: language = 'en' is the default for sphinx, but
+#       since we are working with multiple languages is
+#       better to explicit about it.
+language = 'en'
 locale_dirs = ['_locales/']
 gettext_compact = False
 
