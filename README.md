@@ -1,7 +1,9 @@
 # Scientific Programming for Acoustics
 
+**WARN:** This guide is in its early stages.
+
 The website can be accessed at
-[https://jvcarli.github.io/scientific-programming-for-acoustics/](https://jvcarli.github.io/scientific-programming-for-acoustics/)
+[https://jvcarli.github.io/scientific-programming-for-acoustics/](https://jvcarli.github.io/scientific-programming-for-acoustics/en)
 
 ## Building the website locally
 
