@@ -3,15 +3,3 @@
 venv
 .venv/
 venv/
-
-# Sphinx build
-# NOTE: Sphinx build directory can be defined by
-#       the user when using:
-#       `$ sphinx-build website <build-dir>`
-#       but here is listed common ones
-website/build/
-website/.build/
-website/_build/
-build/
-.build/
-_build/
