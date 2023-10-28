@@ -12,9 +12,7 @@ For building the website locally you'll need these dependencies installed:
 - Python >= 3.9
 - git
 
-Then follow the steps bellow:
-
-_Click to expand_
+Then follow the steps bellow (_Click to expand_):
 
 <details>
 <summary>Unix like systems (macOS, Linux)</summary>
