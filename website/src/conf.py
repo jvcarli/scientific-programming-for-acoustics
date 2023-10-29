@@ -34,3 +34,9 @@ gettext_compact = False
 html_title = "Scientific Programming for Acoustics"
 html_theme = 'piccolo_theme'
 html_static_path = ['_static']
+
+# piccolo_theme options
+html_theme_options = {
+    "banner_text": '⚠️ This guide is incomplete and in its early stages!',
+    "banner_hiding": "temporary"
+}
