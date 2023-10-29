@@ -38,5 +38,6 @@ html_static_path = ['_static']
 # piccolo_theme options
 html_theme_options = {
     "banner_text": '⚠️ This guide is incomplete and in its early stages!',
-    "banner_hiding": "temporary"
+    "banner_hiding": "temporary",
+    "source_url": 'https://github.com/jvcarli/scientific-programming-for-acoustics/'
 }
