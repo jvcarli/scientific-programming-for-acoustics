@@ -1,6 +1,6 @@
 # Scientific Programming for Acoustics
 
-**WARN:** This guide is in its early stages.
+**WARN:** This project is in its early stages.
 
 The website can be accessed at
 [https://jvcarli.github.io/scientific-programming-for-acoustics/en](https://jvcarli.github.io/scientific-programming-for-acoustics/en)
@@ -54,13 +54,13 @@ $ source venv/bin/activate
 Then install Python dependencies using:
 
 ```sh
-$ pip install -r website/requirements.txt
+$ pip install -r dev_requirements.txt
 ```
 
 Finally build the website locally using:
 
 ```sh
-$ cd website && make html
+$ make html
 ```
 
 The website will be located at `build` diretory.
