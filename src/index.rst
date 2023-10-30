@@ -5,6 +5,7 @@ Scientific Programming for Acoustics
    :maxdepth: 2
    :caption: Contents:
 
+   contributing/index
 
 
 Indices and tables
