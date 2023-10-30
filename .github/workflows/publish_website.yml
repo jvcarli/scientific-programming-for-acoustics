@@ -22,21 +22,20 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          python3 -m pip install -r website/requirements.txt
+          python3 -m pip install -r requirements.txt
 
       - name: Generate and update Sphinx locales
         run: |
-          cd website
           make gettext
           sphinx-intl --config src/conf.py update --pot-dir build/gettext --language pt_BR
 
       - name: Sphinx build (english locale - en)
         run: |
-          sphinx-build -b html -D language="en" website/src build/html/en
+          sphinx-build -b html -D language="en" src build/html/en
 
       - name: Sphinx build (brazilian portuguese locale - pt_BR)
         run: |
-          sphinx-build -b html -D language="pt_BR" website/src build/html/pt-br
+          sphinx-build -b html -D language="pt_BR" src build/html/pt-br
 
       - name: Deploy website to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
