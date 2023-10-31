@@ -5,7 +5,9 @@
 The website can be accessed at
 [https://jvcarli.github.io/scientific-programming-for-acoustics/en](https://jvcarli.github.io/scientific-programming-for-acoustics/en)
 
-## Building the website locally
+## Developing
+
+### Building the website locally
 
 For building the website locally you'll need these dependencies installed:
 
@@ -55,6 +57,30 @@ Then install Python dependencies using:
 
 ```sh
 $ pip install -r dev_requirements.txt
+```
+
+Install the project [git hooks](https://git-scm.com/docs/githooks) using
+[pre-commit](https://pre-commit.com/):
+
+_(Click to expand:)_
+<details>
+<summary>Security disclaimer</summary>
+
+`pre-commit` tool was installed in the step above with `pip install -r dev_requirements.txt`.
+
+Please note that when we run `pre-commit install` we are
+installing custom git hooks defined in `.pre-commit-config.yaml`.
+
+The scripts defined there are safe. You can check their entrypoint by
+reading `.pre-commit-config.yaml` file.
+
+[Example](https://github.com/jvcarli/scientific-programming-for-acoustics/blob/main/.pre-commit-config.yaml#L6)
+
+Local scripts are in `tools/bin/git_hooks` directory.
+</details>
+
+```sh
+$ pre-commit install
 ```
 
 Finally build the website locally using:
