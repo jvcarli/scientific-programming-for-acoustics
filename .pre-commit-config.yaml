@@ -1,0 +1,8 @@
+repos:
+- repo: local
+  hooks:
+    - id: ensure-clean-po-files
+      name: Check .po files (Translation files)
+      entry: python ./tools/bin/git_hooks/pre_commit/ensure_clean_po_files.py
+      language: system
+      files: '\.po$'
