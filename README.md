@@ -14,10 +14,10 @@ For building the website locally you'll need these dependencies installed:
 - Python >= 3.9
 - git
 
-Then follow the steps bellow _(Click to expand)_:
+Then follow the steps bellow:
 
 <details>
-<summary>Unix like systems (macOS, Linux)</summary>
+<summary>Unix like systems (macOS, Linux) <em>(Click to expand)</em>:</summary>
 
 Clone the repository:
 
@@ -62,9 +62,8 @@ $ pip install -r dev_requirements.txt
 Install the project [git hooks](https://git-scm.com/docs/githooks) using
 [pre-commit](https://pre-commit.com/):
 
-_(Click to expand:)_
 <details>
-<summary>Security disclaimer</summary>
+<summary>Security disclaimer <em>(Click to expand)</em> :</summary>
 
 `pre-commit` tool was installed in the step above with `pip install -r dev_requirements.txt`.
 
@@ -96,5 +95,4 @@ $ python -m http.server --directory build/html
 ```
 
 Then opening the link: [http://localhost:8000](http://localhost:8000)
-
 </details>
