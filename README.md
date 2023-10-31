@@ -69,12 +69,10 @@ _(Click to expand:)_
 `pre-commit` tool was installed in the step above with `pip install -r dev_requirements.txt`.
 
 Please note that when we run `pre-commit install` we are
-installing custom git hooks defined in `.pre-commit-config.yaml`.
+installing custom git hooks defined in [.pre-commit-config.yaml](/.pre-commit-config.yaml/).
 
 The scripts defined there are safe. You can check their entrypoint by
-reading `.pre-commit-config.yaml` file.
-
-[Example](https://github.com/jvcarli/scientific-programming-for-acoustics/blob/main/.pre-commit-config.yaml#L6)
+reading the file. [Example](https://github.com/jvcarli/scientific-programming-for-acoustics/blob/main/.pre-commit-config.yaml#L6)
 
 Local scripts are in `tools/bin/git_hooks` directory.
 </details>
