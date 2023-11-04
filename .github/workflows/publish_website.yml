@@ -31,7 +31,7 @@ jobs:
 
       - name: Sphinx build (english locale - en)
         run: |
-          sphinx-build -b html -D language="en" src build/html/en
+          sphinx-build -b html -D language="en" src build/html
 
       - name: Sphinx build (brazilian portuguese locale - pt_BR)
         run: |
