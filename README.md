@@ -2,7 +2,8 @@
 
 **WARN:** This project is in its early stages.
 
-The website can be accessed at <https://jvcarli.github.io/scientific-programming-for-acoustics>
+This repository contains the website for Scientific Programming for Acoustics project.
+It can be accessed at <https://jvcarli.github.io/scientific-programming-for-acoustics>
 
 ## Contributing
 
